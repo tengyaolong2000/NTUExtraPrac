@@ -17,11 +17,6 @@ void addNameCard(NameCard holder[]);
 void removeNameCard(NameCard holder[]);
 void getNameCard(NameCard holder[]);
 
-
-
-	/*end_edit*/
-	/*edit*/
-/* Write your code here */
 int main(){
 
     int choice, i;
