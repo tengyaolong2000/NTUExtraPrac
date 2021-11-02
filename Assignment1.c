@@ -17,6 +17,11 @@ void addNameCard(NameCard holder[]);
 void removeNameCard(NameCard holder[]);
 void getNameCard(NameCard holder[]);
 
+
+
+	/*end_edit*/
+	/*edit*/
+/* Write your code here */
 int main(){
 
     int choice, i;
@@ -56,10 +61,8 @@ int main(){
 void listNameCards(NameCard holder[MAX]){
     int i, empty=1;
 
-    for (i=0;i<MAX;i++){
-        if (holder[i].nameCardID != -1) empty =0;
-    }
-    if (empty==1) {printf("The name card holder is empty\n"); return;}
+
+    if (holder[MAX-1].nameCardID == -1) {printf("The name card holder is empty\n"); return;}
 
     for(i=0;i<MAX;i++){
         if (holder[i].nameCardID == -1)
@@ -134,10 +137,8 @@ void removeNameCard(NameCard holder[]){
     
     for (i=0;name[i];i++) name[i] = tolower(name[i]);
 
-    for (i=0;i<MAX;i++){
-        if (holder[i].nameCardID != -1) empty =0;
-    }
-    if (empty==1) {printf("The name card holder is empty\n"); return;}
+   
+    if (holder[MAX-1].nameCardID == -1) {printf("The name card holder is empty\n"); return;}
 
     for(i=0;i<MAX;i++){
         if (strcmp(holder[i].personName, "\0")!=0){
@@ -160,7 +161,7 @@ void removeNameCard(NameCard holder[]){
         }
 
     }
-    printf("The target person name is not in the name card holder \n");
+    printf("The target person name is not in the name card holder\n");
 
 }
 
