@@ -27,8 +27,7 @@ int main(){
         holder[i] = (NameCard) {-1, "\0", "\0"};
     }
 
-
-
+    
     puts("NTU NAME CARD HOLDER MANAGEMENT PROGRAM:");
     puts("1: listNameCards()");
     puts("2: addNameCard()");
@@ -54,8 +53,7 @@ int main(){
 }
 
 void listNameCards(NameCard holder[MAX]){
-    int i, empty=1;
-
+    int i;
 
     if (holder[MAX-1].nameCardID == -1) {printf("The name card holder is empty\n"); return;}
 
