@@ -24,7 +24,7 @@ int main()
 int findSubstring(char *str, char *substr){
     int i=0, j=0;
     while (str[i] != '\0'){
-        if (str[i]!=substr[j]) i++;
+        if (str[i]!=substr[0]) i++;
         while (str[i]==substr[j]){
             j++; i++;
             if (substr[j]=='\0') return 1;
