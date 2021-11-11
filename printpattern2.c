@@ -10,10 +10,16 @@ int main(){
     printf("The pattern is \n");
 
     for (i=1; i<rows+1; i++){
+        if (i%2==1){ 
         for (j=1; j<i+1; j++){
          
-            printf( (j%2 == 0) ? "B" : "A");
+            printf( (j%2 == 0) ? "B" : "A");}
 
+        }
+        else {
+            for (j=1; j<i+1; j++){
+         
+            printf( (j%2 == 0) ? "A" : "B");}
         }
         printf("\n");
     }
