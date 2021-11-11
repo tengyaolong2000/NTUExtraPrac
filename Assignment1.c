@@ -22,7 +22,6 @@ int main(){
     int choice, i;
     NameCard holder[MAX];
     
-    //fill array with default values
     for (i=0;i<MAX;i++){
         holder[i] = (NameCard) {-1, "\0", "\0"};
     }
@@ -38,7 +37,7 @@ int main(){
     do{
         puts("Enter your choice:");
         scanf("%d", &choice);
-        if (choice==5) return 0;
+        if (choice>=5) return 0;
         switch(choice){
             case 1: printf("listNameCards():\n"); listNameCards(holder); break;
             case 2: printf("addNameCard():\n"); addNameCard(holder); break;
