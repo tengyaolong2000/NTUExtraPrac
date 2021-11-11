@@ -19,7 +19,7 @@ void findMinMax1D(int ar[], int size, int *min, int *max){
     int i;
     *min = ar[0];
     *max = ar[0];
-    for (i=2; i<size; i++){
+    for (i=1; i<size; i++){
         if (*max < *(ar+i))
         *max = ar[i];
 
