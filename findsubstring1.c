@@ -39,18 +39,10 @@ int findSubstring(char *str, char *substr){
 }
 
 
-int findSubstring2(char *str, char *substr){
-    
+int findSubstring2(char *str, char *substr){ 
    char copy[50];
-
-   for (int i=0; i< strlen(str)-strlen(substr);i++){
-      
+   for (; str<= str+strlen(str)-strlen(substr);str++){
       strncpy(copy, str, strlen(substr));
-      
-      if (strcmp(substr, copy) == 0) return 1;
-
-      else 
-         str++;  
-   }
+      if (strcmp(substr, copy) == 0) return 1;}
    return 0;
 }

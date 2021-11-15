@@ -24,7 +24,7 @@ int minOfMax2D(int ar[][SIZE], int rowSize, int colSize){
     for (i=0; i<rowSize; i++){
         for (j=0; j<colSize; j++){
             if (ar[i][j]> max) max =ar[i][j];
-
+            
         }
         if (i==0) max1 = max;
 
