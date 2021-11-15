@@ -17,9 +17,7 @@ int main()
 int digitValue1(int num, int k){
     
     int i, mod=1;
-    for (i=0;i<k;i++){
-        mod *= 10;
-    }
+    for (i=0;i<k;i++){mod *= 10;}
     return (num%mod)/(mod/10);
    
 }

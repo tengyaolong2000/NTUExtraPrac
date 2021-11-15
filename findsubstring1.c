@@ -2,6 +2,7 @@
 #include <string.h>
 #define INIT_VALUE 999
 int findSubstring(char *str, char *substr);
+int findSubstring2(char *str, char *substr);
 int main()
 {
    char str[40], substr[40], *p;  
@@ -12,7 +13,7 @@ int main()
    printf("Enter the substring: \n");
    fgets(substr, 80, stdin);
    if (p=strchr(substr,'\n')) *p = '\0';  
-   result = findSubstring(str, substr);
+   result = findSubstring2(str, substr);
    if (result == 1)
       printf("findSubstring(): Is a substring\n");
    else if ( result == 0)
@@ -22,15 +23,34 @@ int main()
    return 0;
 }
 int findSubstring(char *str, char *substr){
-    int i=0, j=0;
+    int i=0, j=0, k=0;
     while (str[i] != '\0'){
-        if (str[i]!=substr[0]) i++;
-        while (str[i]==substr[j]){
-            j++; i++;
+         k=i;
+        
+        while (str[k]==substr[j]){
+            j++; k++;
             if (substr[j]=='\0') return 1;
         }
         j=0;
+        i++;
     }
     return 0;
    
+}
+
+
+int findSubstring2(char *str, char *substr){
+    
+   char copy[50];
+
+   for (int i=0; i< strlen(str)-strlen(substr);i++){
+      
+      strncpy(copy, str, strlen(substr));
+      
+      if (strcmp(substr, copy) == 0) return 1;
+
+      else 
+         str++;  
+   }
+   return 0;
 }

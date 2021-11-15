@@ -1,3 +1,6 @@
+
+//wrong method dont follow look at finsubstring1.c instead
+
 #include <stdio.h>
 #include <string.h>
 #define INIT_VALUE 999
